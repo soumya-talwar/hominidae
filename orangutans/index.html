@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>hominidae — orangutans</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+    <script type="text/javascript" src="ape.js"></script>
+    <script type="text/javascript" src="female.js"></script>
+    <script type="text/javascript" src="bigmale.js"></script>
+    <script type="text/javascript" src="smallmale.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row d-flex justify-content-center" style="margin-top: 8%;">
+        <div class="col-auto">
+          <p>Pongo (Hominidae, 2021) by Soumya Talwar</p>
+          <div id="artwork"></div>
+          <div class="d-flex flex-row mt-3" id="buttons">
+            <button id="start-button" type="button" class="mx-2 btn btn-sm btn-outline-dark">start</button>
+            <button id="stop-button" type="button" class="mx-2 btn btn-sm btn-outline-dark">stop</button>
+            <button id="reset-button" type="button" class="mx-2 btn btn-sm btn-outline-dark">reset</button>
+          </div>
+          <div class="d-flex flex-row my-5">
+            <div class="col-3 gap-4" id="female-sliders"></div>
+            <div class="col-3 gap-4" id="bigmale-sliders"></div>
+            <div class="col-3 gap-4" id="smallmale-sliders"></div>
+          </div>
+        </div>
+        <div class="col-2 pt-5" id="console"></div>
+      </div>
+    </div>
+  </body>
+
+</html>
