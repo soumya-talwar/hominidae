@@ -54,15 +54,13 @@ class Male extends Ape {
           if (this.rank > hierarchy[i].rank) {
             steer = super.flee(hierarchy[i]);
             steer.mult(this.weights.flee);
-          }
-          else if (this.rank < hierarchy[i].rank)
+          } else if (this.rank < hierarchy[i].rank)
             hierarchy[i].acceleration.add(hierarchy[i].flee(this).mult(hierarchy[i].weights.flee));
         }
-      }
-      else {
+      } else {
         for (let i = 0; i < chimpanzees.length; i++) {
           let distance = p5.Vector.dist(this.position, chimpanzees[i].position);
-          let radii = this.size/2 + chimpanzees[i].size/2;
+          let radii = this.size / 2 + chimpanzees[i].size / 2;
           if (distance < radii && distance > 0) {
             if (chimpanzees[i].sex == "female")
               this.dominate(chimpanzees[i]);
@@ -84,10 +82,11 @@ class Male extends Ape {
       else if (target.submission[this.id] < 500)
         target.submission[this.id]++;
       target.acceleration.add(target.flee(this).mult(target.weights.flee));
-      target.color[0] -= 1;
+      if (time % 60 == 0)
+        createP(`assaulted, ${floor(time/60)}s`).parent(sidebar);
+      target.color[0] -= 5;
       target.color[0] = constrain(target.color[0], 0, 255);
-    }
-    else {
+    } else {
       let diff1 = 40 - this.age;
       let diff2 = 40 - target.age;
       let sum = diff1 + diff2;
@@ -99,8 +98,7 @@ class Male extends Ape {
         this.rank = target.rank;
         target.rank = temp;
         target.acceleration.add(target.flee(this).mult(target.weights.flee));
-      }
-      else {
+      } else {
         let steer = super.flee(target);
         steer.mult(this.weights.flee);
         this.acceleration.add(steer);
