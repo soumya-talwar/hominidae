@@ -6,7 +6,7 @@ class Ape {
     this.acceleration = createVector(0, 0);
     this.perlin = [int(random(100)), int(random(100))];
     this.sight = 150;
-    this.periphery = PI/4;
+    this.periphery = PI / 4;
     this.maxforce = 0.1;
   }
 
@@ -17,7 +17,7 @@ class Ape {
       if (this.mother == orangutans[i])
         continue;
       let distance = p5.Vector.dist(this.position, orangutans[i].position);
-      let radii = this.size/2 + orangutans[i].size/2;
+      let radii = this.size / 2 + orangutans[i].size / 2;
       if (distance < radii && distance > 0) {
         let difference = p5.Vector.sub(this.position, orangutans[i].position);
         difference.normalize();
@@ -79,13 +79,12 @@ class Ape {
       if (this.sex == "female") {
         this.color[1] += 60;
         this.color[1] = constrain(this.color[1], 0, 255);
-        createP("consensual").parent(sidebar);
+        createP(`consensual, ${floor(time/60)}s`).parent(sidebar);
         this.reproduce("big");
-      }
-      else {
+      } else {
         target.color[1] -= 60;
         target.color[1] = constrain(target.color[1], 0, 255);
-        createP("non-consensual").parent(sidebar);
+        createP(`non-consensual, ${floor(time/60)}s`).parent(sidebar);
         target.reproduce("small");
       }
     }
@@ -106,12 +105,12 @@ class Ape {
     let child;
     let sex = random(10) < 5 ? "male" : "female";
     if (sex == "female")
-      child = new Female(0, this.position.x + this.size/2, this.position.y);
+      child = new Female(0, this.position.x + this.size / 2, this.position.y);
     else {
       if (gene == "big")
-        child = new Bigmale(0, this.position.x + this.size/2, this.position.y);
+        child = new Bigmale(0, this.position.x + this.size / 2, this.position.y);
       else
-        child = new Smallmale(0, this.position.x + this.size/2, this.position.y);
+        child = new Smallmale(0, this.position.x + this.size / 2, this.position.y);
     }
     child.mother = this;
     this.child = child;
@@ -122,13 +121,13 @@ class Ape {
 
   move() {
     let desired;
-    if (this.position.x < this.size/2)
+    if (this.position.x < this.size / 2)
       desired = createVector(this.maxspeed, this.velocity.y);
-    else if (this.position.x > width - this.size/2)
+    else if (this.position.x > width - this.size / 2)
       desired = createVector(-this.maxspeed, this.velocity.y);
-    if (this.position.y < this.size/2)
+    if (this.position.y < this.size / 2)
       desired = createVector(this.velocity.x, this.maxspeed);
-    else if (this.position.y > height - this.size/2)
+    else if (this.position.y > height - this.size / 2)
       desired = createVector(this.velocity.x, -this.maxspeed);
     if (desired) {
       desired.normalize();
@@ -155,14 +154,12 @@ class Ape {
         if (this === females[i])
           females.splice(i, 1);
       }
-    }
-    else if (this.type == "big") {
+    } else if (this.type == "big") {
       for (let i = 0; i < bigmales.length; i++) {
         if (this === bigmales[i])
           bigmales.splice(i, 1);
       }
-    }
-    else {
+    } else {
       for (let i = 0; i < smallmales.length; i++) {
         if (this === smallmales[i])
           smallmales.splice(i, 1);
@@ -174,9 +171,9 @@ class Ape {
     let heading = this.velocity.heading();
     push();
     translate(this.position.x, this.position.y);
-    rotate(heading - PI/2);
+    rotate(heading - PI / 2);
     stroke(this.color[0], this.color[1], this.color[2], 70);
-    line(0, -this.size/2, 0, this.size/2);
+    line(0, -this.size / 2, 0, this.size / 2);
     pop();
   }
 }

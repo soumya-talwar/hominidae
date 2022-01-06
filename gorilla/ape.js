@@ -27,7 +27,7 @@ class Ape {
   follow(target) {
     let desired = p5.Vector.sub(target.position, this.position);
     let distance = desired.mag();
-    let speed = map(distance, this.size/2 + target.size/2, this.size/2 + target.size/2 + 5, 0.01, this.maxspeed);
+    let speed = map(distance, this.size / 2 + target.size / 2, this.size / 2 + target.size / 2 + 5, 0.01, this.maxspeed);
     desired.normalize();
     desired.mult(speed);
     let steer = p5.Vector.sub(desired, this.velocity);
@@ -60,6 +60,7 @@ class Ape {
         gorillas.splice(i, 1);
     }
     population--;
+    createP(`infant killed, ${floor(time/60)}s`).parent(sidebar);
     let mother = target.mother;
     delete mother.child;
     mother.color[1] -= 60;
@@ -102,13 +103,13 @@ class Ape {
 
   move() {
     let desired;
-    if (this.position.x < this.size/2)
+    if (this.position.x < this.size / 2)
       desired = createVector(this.maxspeed, this.velocity.y);
-    else if (this.position.x > width - this.size/2)
+    else if (this.position.x > width - this.size / 2)
       desired = createVector(-this.maxspeed, this.velocity.y);
-    if (this.position.y < this.size/2)
+    if (this.position.y < this.size / 2)
       desired = createVector(this.velocity.x, this.maxspeed);
-    else if (this.position.y > height - this.size/2)
+    else if (this.position.y > height - this.size / 2)
       desired = createVector(this.velocity.x, -this.maxspeed);
     if (desired) {
       desired.normalize();
@@ -141,9 +142,9 @@ class Ape {
     let heading = this.velocity.heading();
     push();
     translate(this.position.x, this.position.y);
-    rotate(heading - PI/2);
+    rotate(heading - PI / 2);
     stroke(this.color[0], this.color[1], this.color[2], 70);
-    line(0, -this.size/2, 0, this.size/2);
+    line(0, -this.size / 2, 0, this.size / 2);
     pop();
   }
 }

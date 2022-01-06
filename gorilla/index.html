@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>hominidae — gorilla</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+    <script type="text/javascript" src="ape.js"></script>
+    <script type="text/javascript" src="female.js"></script>
+    <script type="text/javascript" src="male.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10 position-fixed p-0" id="artwork"></div>
+        <div class="col-2 offset-10 d-flex flex-column py-5 px-4" id="console"></div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10 fixed-bottom bg-white d-flex gap-3 align-items-center" id="bottom">
+          <p class="me-auto px-3 my-0">Gorilla (Hominidae, 2021) by Soumya Talwar — <span class="text-decoration-underline" id="more">read more</span>. See the other works in this series — <a target="_blank" href="https://soumya-talwar.github.io/hominidae/pongo">Pongo</a> and <a target="_blank" href="https://soumya-talwar.github.io/hominidae/pan">Pan</a>. Or visit my <a target="_blank" href="https://soumya-talwar.github.io/portfolio/">portfolio</a>.</p>
+          <p class="controls px-2 my-0">start</p>
+          <p class="controls px-2 my-0">stop</p>
+          <p class="controls px-2 my-0">reset</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-none container-fluid d-flex justify-content-center position-absolute top-0" id="about">
+      <div class="col-5 bg-white py-5 px-5">
+        <p>Hominidae is a series of interactive autonomous artworks that illustrate sexual violence seen in non-human species of the Great Apes family. Gorilla is the second work in this series, it simulates mathematically the behaviours and infanticides in a population of 50 gorillas.<br><br>
+          Gorillas live in somewhat larger groups, and each big silverback male can have a harem of three to four females. In these harems, they spend most of their time peacefully. Aggression between males and females, or among females, is rare. But if one male is keeping three to four females with him, then it means there are two to three males that don't have any mates at all.<br><br>
+          These bachelor males follow the troop on the uphill side and wait until the silverback is not watching. When they see an opportunity, they charge downhill right towards a female with a young, grabbing her child and smashing it on the ground, killing it. He runs away after that and what follows, surprisingly, is that the female leaves the silverback within a few days and goes with the bachelor male to have a consortship. The message that the bachelor is delivering to her through his actions is clear. She could stay with the silverback and have another child, and he’d come down again and kill her baby. If she didn’t want that, she should come off with him. The new pair may be stable and last a long time, or another male may come by and separate them. The females are trapped in this vortex of male initiated violence. At any moment a male may come crashing through the forest and kill her young, and the best way for her to prevent this is to go off with that male.<br><br>
+          The illustration begins with a population of 50 gorillas. The males in this illustration are painted gray, whereas the females are blue and their tint darkens whenever they lose an offspring. Each gorilla is an autonomous being who makes its own choices about how to act in its environment. The age and sex of a gorilla determines its characteristics and behaviour—a male adult gorilla wanders and the females in his harem follow him. If a silverback sees another adult male approaching them, he'll chase them away. But if the male is a bachelor male and he spots an infant with its mother, he will charge towards it and attempt to kill it. When a mother loses her child, she leaves her previous mate and goes off with the male who killed her infant. She comes into fertility again and starts to reproduce with the new male. One the right is a log of all the infanticides.<br><br>
+          These gorillas have a lifespan as well. A gorilla grows by a year every 5 seconds, and once it crosses 60 years, it dies.
+        </p>
+        <p class="text-decoration-underline" id="back">back</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -6,7 +6,7 @@ class Male extends Ape {
     this.color = [200, 200, 200];
     this.maxspeed = 2;
     this.sight = 150;
-    this.periphery = PI/4;
+    this.periphery = PI / 4;
     if (this.age >= 20) {
       this.adult = true;
       this.size = 150;
@@ -40,11 +40,11 @@ class Male extends Ape {
           if (this.harem.length > 0) {
             if (gorillas[i].sex == "male" && gorillas[i].adult)
               gorillas[i].acceleration.add(gorillas[i].flee(this));
-          }
-          if (this.harem.length < 3) {
+          } else if (this.harem.length == 0) {
             if (!gorillas[i].adult && gorillas[i].mother)
               steer = super.kill(gorillas[i]);
-            else if (gorillas[i].sex == "female" && !gorillas[i].alpha)
+          } else if (this.harem.length < 3) {
+            if (gorillas[i].sex == "female" && !gorillas[i].alpha)
               steer = super.seek(gorillas[i]);
           }
         }
