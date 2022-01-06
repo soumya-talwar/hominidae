@@ -3,10 +3,10 @@ class Female extends Ape {
     super(age, pos1, pos2);
     this.sex = "female";
     this.color = [255, 128, 80];
-    this.maxspeed = weights.female.speed.value();
+    this.maxspeed = 3;
     this.weights = {
-      "seek": weights.female.seek.value(),
-      "flee": weights.female.flee.value(),
+      "seek": 1,
+      "flee": 3,
       "separate": 1
     };
     if (this.age >= 20) {
@@ -45,8 +45,7 @@ class Female extends Ape {
           if (orangutans[i].sex == "male" && orangutans[i].adult && orangutans[i].type == "big") {
             steer = super.seek(orangutans[i]);
             steer.mult(this.weights.seek);
-          }
-          else if (orangutans[i].sex == "male" && orangutans[i].adult && orangutans[i].type == "small") {
+          } else if (orangutans[i].sex == "male" && orangutans[i].adult && orangutans[i].type == "small") {
             steer = super.flee(orangutans[i]);
             steer.mult(this.weights.flee);
           }

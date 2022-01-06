@@ -6,6 +6,7 @@
     <title>hominidae — orangutans</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script type="text/javascript" src="sketch.js"></script>
     <script type="text/javascript" src="ape.js"></script>
@@ -16,23 +17,32 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row d-flex justify-content-center" style="margin-top: 8%;">
-        <div class="col-auto">
-          <p>Pongo (Hominidae, 2021) by Soumya Talwar</p>
-          <div id="artwork"></div>
-          <div class="d-flex flex-row mt-3" id="buttons">
-            <button id="start-button" type="button" class="mx-2 btn btn-sm btn-outline-dark">start</button>
-            <button id="stop-button" type="button" class="mx-2 btn btn-sm btn-outline-dark">stop</button>
-            <button id="reset-button" type="button" class="mx-2 btn btn-sm btn-outline-dark">reset</button>
-          </div>
-          <div class="d-flex flex-row my-5">
-            <div class="col-3 gap-4" id="female-sliders"></div>
-            <div class="col-3 gap-4" id="bigmale-sliders"></div>
-            <div class="col-3 gap-4" id="smallmale-sliders"></div>
-          </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10 position-fixed p-0" id="artwork"></div>
+        <div class="col-2 offset-10 d-flex flex-column py-5 px-4" id="console"></div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10 fixed-bottom bg-white d-flex gap-3 align-items-center" id="bottom">
+          <p class="me-auto px-3 my-0">Pongo (Hominidae, 2021) by Soumya Talwar — <span class="text-decoration-underline" id="more">read more</span>. See the other works in this series — <a target="_blank" href="https://soumya-talwar.github.io/hominidae/gorilla">Gorilla</a> and <a target="_blank" href="https://soumya-talwar.github.io/hominidae/pan">Pan</a>. Or visit my <a target="_blank" href="https://soumya-talwar.github.io/portfolio/">portfolio</a>.</p>
+          <p class="controls px-2 my-0">start</p>
+          <p class="controls px-2 my-0">stop</p>
+          <p class="controls px-2 my-0">reset</p>
         </div>
-        <div class="col-2 pt-5" id="console"></div>
+      </div>
+    </div>
+    <div class="d-none container-fluid d-flex justify-content-center position-absolute top-0" id="about">
+      <div class="col-5 bg-white py-5 px-5">
+        <p>Hominidae is a series of interactive autonomous artworks that illustrate sexual violence seen in non-human species of the Great Apes family. Pongo is the first in this series, it simulates mathematically the behaviour and sexual violence in a population of 50 orangutans.<br><br>
+          Orangutans are the least social of apes. For the most of the eight years between births, before an orangutan female goes into fertility again, she has no interest in the males at all and she doesn't come close to them. There are two kinds of orangutan males—a large one and a small one. The big males are about 200 pounds, and the females and the small males are less than half that size, about 90 pounds. The small male develops normally up until adolescence and then stops developing further. They remain looking like adolescents but they are completely fertile and have a normal complement of testosterone; they're sexually entirely capable.<br><br>
+          The females always want to mate with the big males because the big males are more successful and that is good for the genes that her children get. These big males are ponderous though; they can't move quickly. Whereas the females are lithe and they can go pretty fast, so you know the female is choosing the male because if she didn't want him, she could be gone and there's no way that he could catch her. The small males aren't attractive to the females, but they have one advantage. They're small and fast, and they can catch females and force them into sexual intercourse.<br><br>
+          The illustration begins with a population of 50 orangutans. The males in this illustration are painted gray, whereas the females are orange and their tint changes after each mating. If the mating was forced, the red tint shoots up, but if the mating is consensual, the female's color starts to lean more towards yellow. Each orangutan is an autonomous being who makes its own choices about how to act in its environment. The age and sex of an orangutan determines its characteristics and behaviour—it'll wander around aimlessly until another orangutan enters its periphery. If a female in estrus catches sight of a larger male, she'll seek him, but if she sees a smaller male pursuing her, she'll flee. Both the larger male and the smaller males will chase fertile females, but at different velocities due to the difference in their sizes.<br><br>
+          Mating results in the birth of a new infant orangutan, and while the odds of either biological sex being picked are 50%, if the offpsring is a male, he will carry the gene of his father. So if the mating was non-consensual (i.e. the smaller male was the parent) and if the infant is a male, he will be the smaller kind as well. This way the sexual violence by the smaller males in one generation gives way to more violence in the future. The greater the number of forced matings, the greater is the sexual violence in the future generations. On the right is a log of all the matings, and whether they were forced or not.<br><br>
+          These orangutans have a lifespan as well. An orangutan grows by a year every 5 seconds, and once it crosses 60 years, it dies.
+        </p>
+        <p class="text-decoration-underline" id="back">back</p>
       </div>
     </div>
   </body>

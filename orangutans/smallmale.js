@@ -4,10 +4,10 @@ class Smallmale extends Ape {
     this.sex = "male";
     this.type = "small";
     this.color = [180, 180, 180];
-    this.maxspeed = weights.smallmale.speed.value();
+    this.maxspeed = 3;
     this.weights = {
-      "seek": weights.smallmale.seek.value(),
-      "flee": weights.smallmale.flee.value(),
+      "seek": 2,
+      "flee": 0,
       "separate": 1
     };
     if (this.age >= 20) {
