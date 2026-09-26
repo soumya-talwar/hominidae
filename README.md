@@ -16,9 +16,9 @@ Their movement is handled using **p5.Vector**. Females in estrus are attracted t
 
 When reproduction occurs, offspring inherit characteristics from their parents, including the male type when the offspring is male.
 
-![Pongo artwork](assets/pongo.png)
-
 [**Experience Pongo**](https://soumya-talwar.github.io/hominidae/pongo/)
+
+![Pongo artwork](assets/pongo.png)
 
 ## Gorilla
 
@@ -30,9 +30,9 @@ Females follow their silverback, while males without a group compete for access 
 
 The simulation therefore changes the group structure based on these interactions: a single attack can cause a female to leave one group and form a new reproductive relationship with another male.
 
-![Gorilla artwork](assets/gorilla.png)
-
 [**Experience Gorilla**](https://soumya-talwar.github.io/hominidae/gorilla/)
+
+![Gorilla artwork](assets/gorilla.png)
 
 ## Pan
 
@@ -44,9 +44,9 @@ Higher-ranking males can chase lower-ranking males away from females in estrus. 
 
 Males can also repeatedly interact violently with females, causing the female's state to change to reflect submission.
 
-![Pan artwork](assets/pan.png)
-
 [**Experience Pan**](https://soumya-talwar.github.io/hominidae/pan/)
+
+![Pan artwork](assets/pan.png)
 
 ## How it works
 
