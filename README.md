@@ -18,7 +18,7 @@ When reproduction occurs, offspring inherit characteristics from their parents, 
 
 ![Pongo artwork](assets/pongo.png)
 
-[**Experience Pongo →**](https://soumya-talwar.github.io/hominidae/pongo/)
+[**Experience Pongo**](https://soumya-talwar.github.io/hominidae/pongo/)
 
 ## Gorilla
 
@@ -32,7 +32,7 @@ The simulation therefore changes the group structure based on these interactions
 
 ![Gorilla artwork](assets/gorilla.png)
 
-[**Experience Gorilla →**](https://soumya-talwar.github.io/hominidae/gorilla/)
+[**Experience Gorilla**](https://soumya-talwar.github.io/hominidae/gorilla/)
 
 ## Pan
 
@@ -46,7 +46,7 @@ Males can also repeatedly interact violently with females, causing the female's 
 
 ![Pan artwork](assets/pan.png)
 
-[**Experience Pan →**](https://soumya-talwar.github.io/hominidae/pan/)
+[**Experience Pan**](https://soumya-talwar.github.io/hominidae/pan/)
 
 ## How it works
 
@@ -65,6 +65,8 @@ Movement is handled using **p5.Vector**, with calculations for distance, directi
 
 The animals respond to one another based on their properties and current state. Reproduction creates new individuals, while age determines when individuals become adults and eventually die.
 
+The simulations also use colour to represent reproductive interactions. Animals change colour during mating to distinguish between consensual and forced mating, making these interactions visible as they happen in the simulation.
+
 The simulations run continuously, allowing the population and its relationships to change as the individual behaviours play out.
 
 ## Built with
@@ -74,5 +76,3 @@ The simulations run continuously, allowing the population and its relationships 
 - **p5.Vector**
 - Object-oriented programming
 - Generative simulation
-
-_Hominidae, 2021_
