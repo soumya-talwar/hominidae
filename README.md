@@ -1,8 +1,8 @@
-# Hominidae
+# HOMINIDAE
 
-**A series of computational simulations of social and reproductive behaviour in great apes.**
+### Autonomous artworks of sexual violence in apes
 
-Hominidae is a series of three interactive simulations built with **p5.js**, based on orangutans, gorillas, and chimpanzees.
+Hominidae is a series of three computational simulations built with **p5.js**, based on the social and reproductive behaviour observed in orangutans, gorillas, and chimpanzees.
 
 Each simulation creates a population of individual animals with their own properties and behaviours. They move around the canvas, respond to nearby animals, reproduce, and change behaviour based on what is happening around them.
 
@@ -16,7 +16,7 @@ Their movement is handled using **p5.Vector**. Females in estrus are attracted t
 
 When reproduction occurs, offspring inherit characteristics from their parents, including the male type when the offspring is male.
 
-[**Experience Pongo**](https://soumya-talwar.github.io/hominidae/pongo/)
+[**View Pongo**](https://soumya-talwar.github.io/hominidae/pongo/)
 
 ![Pongo artwork](assets/pongo.png)
 
@@ -24,13 +24,13 @@ When reproduction occurs, offspring inherit characteristics from their parents, 
 
 **Gorillas — groups, competition and infanticide**
 
-The gorilla simulation is built around groups of females led by a dominant silverback, with other males moving around outside the group.
+The gorilla simulation is built around groups of females led by a dominant silverback.
 
-Females follow their silverback, while males without a group compete for access to females. A male with fewer than three females can attack an infant belonging to another male. When an infant is killed, its mother leaves her existing group and joins the male who killed it.
+Females follow their silverback, while males without a group compete for access to females. The male can attack an infant belonging to another male. When an infant is killed, its mother leaves her existing group and joins the male who killed it.
 
 The simulation therefore changes the group structure based on these interactions: a single attack can cause a female to leave one group and form a new reproductive relationship with another male.
 
-[**Experience Gorilla**](https://soumya-talwar.github.io/hominidae/gorilla/)
+[**View Gorilla**](https://soumya-talwar.github.io/hominidae/gorilla/)
 
 ![Gorilla artwork](assets/gorilla.png)
 
@@ -42,19 +42,18 @@ The chimpanzee simulation creates a hierarchy among adult males based on age.
 
 Higher-ranking males can chase lower-ranking males away from females in estrus. Lower-ranking males can challenge males immediately above them and move up the hierarchy if they win.
 
-Males can also repeatedly interact violently with females, causing the female's state to change to reflect submission.
+Males also repeatedly interact violently with females, causing the female's state to change to reflect submission.
 
-[**Experience Pan**](https://soumya-talwar.github.io/hominidae/pan/)
+[**View Pan**](https://soumya-talwar.github.io/hominidae/pan/)
 
 ![Pan artwork](assets/pan.png)
 
 ## How it works
 
-All three simulations use individual objects to represent the animals.
-
 Each animal keeps track of properties such as:
 
 - position and velocity
+- sight & periphery
 - age
 - sex
 - size or physical type
@@ -71,8 +70,7 @@ The simulations run continuously, allowing the population and its relationships 
 
 ## Built with
 
-- **p5.js**
 - **JavaScript**
+- **p5.js**
 - **p5.Vector**
-- Object-oriented programming
-- Generative simulation
+- **Object Oriented Programming**
